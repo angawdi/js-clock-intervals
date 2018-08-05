@@ -1,14 +1,26 @@
 #clock {
+	position: relative;
 }
 
 #clock img {
+	position: relative;
 }
 
+
 #hour {
+	position: relative;
+	transform: translate(-100%, -100%);
+	z-index: 1;
 }
 
 #minute {
+	position: relative;
+	transform: translateY(-100%);
+	z-index: 2;
 }
 
 #second {
+	position: relative;
+	transform: translateX(-100%);
+	z-index: 3;
 }
