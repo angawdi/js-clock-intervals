@@ -1,20 +1,21 @@
 var ss = mm = hh =count = 0;
 
 console.log('hi');
-(function(){
-	setInterval(function(){
-		count++;
-	ss = count % 60;
-	mm = Math.floor((count/60)%60);
-	hh = Math.floor(count/60/60);
-	secondd(ss);
-	minutee(mm);
-	hourr(hh);
-	}, 1);
+document.addEventListener("DOMContentLoaded", function(){
+	console.log("DOM Content Loaded");
+	// displayTime();
+	setInterval(displayTime, 1000);
+});
 
-	
-	
-}());
+function displayTime(){
+		count++;
+		ss = count % 60;
+		mm = Math.floor((count/60)%60);
+		hh = Math.floor(count/60/60);
+		secondd(ss);
+		minutee(mm);
+		hourr(hh);
+}
 
 function secondd(sec){
 	var sss = document.getElementById('second');
